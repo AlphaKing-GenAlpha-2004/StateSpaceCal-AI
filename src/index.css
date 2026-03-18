@@ -13,15 +13,23 @@
   --text: #222222;
   --text-muted: #666666;
   --border: #e5e7eb;
+  --input-bg: #f0f0f0;
+  --input-text: #222222;
+  --placeholder: #999999;
+  color-scheme: light;
 }
 
 [data-theme='dark-ai'] {
   --background: #0f172a;
   --card: #1e293b;
   --accent: #22c55e;
-  --text: #e5e7eb;
+  --text: #f1f5f9;
   --text-muted: #94a3b8;
   --border: #334155;
+  --input-bg: #334155;
+  --input-text: #f1f5f9;
+  --placeholder: #64748b;
+  color-scheme: dark;
 }
 
 [data-theme='ocean-blue'] {
@@ -31,6 +39,10 @@
   --text: #0f172a;
   --text-muted: #475569;
   --border: #bae6fd;
+  --input-bg: #f0f9ff;
+  --input-text: #0f172a;
+  --placeholder: #94a3b8;
+  color-scheme: light;
 }
 
 [data-theme='sunset-orange'] {
@@ -40,6 +52,10 @@
   --text: #1c1917;
   --text-muted: #78716c;
   --border: #fed7aa;
+  --input-bg: #ffedd5;
+  --input-text: #1c1917;
+  --placeholder: #9a3412;
+  color-scheme: light;
 }
 
 body {
@@ -57,6 +73,18 @@ body {
 .bg-accent { background-color: var(--accent); }
 .border-theme { border-color: var(--border); }
 .text-muted { color: var(--text-muted); }
+
+.bg-input { background-color: var(--input-bg); }
+.text-input { color: var(--input-text); }
+
+input::placeholder {
+  color: var(--placeholder);
+}
+
+select option {
+  background-color: var(--card);
+  color: var(--text);
+}
 
 /* Math Background Pattern */
 .math-bg {
@@ -78,6 +106,7 @@ body {
   position: absolute;
   font-family: serif;
   font-size: 2rem;
-  color: var(--text);
+  color: var(--text-muted);
+  opacity: 0.1;
   user-select: none;
 }
