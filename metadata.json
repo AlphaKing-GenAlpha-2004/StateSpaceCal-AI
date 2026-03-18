@@ -1,0 +1,5 @@
+{
+  "name": "StateSpace100",
+  "description": "A multi-platform calculator for 100 unique combinatorial and AI state space formulas, handling extremely large values with logarithmic precision.",
+  "requestFramePermissions": []
+}

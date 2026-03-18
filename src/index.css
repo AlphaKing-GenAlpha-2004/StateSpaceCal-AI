@@ -1,0 +1,83 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Inter:wght@100..900&display=swap');
+
+@theme {
+  --font-display: "Orbitron", "Montserrat", sans-serif;
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+}
+
+:root {
+  --background: #f7f7f7;
+  --card: #ffffff;
+  --accent: #22a565;
+  --text: #222222;
+  --text-muted: #666666;
+  --border: #e5e7eb;
+}
+
+[data-theme='dark-ai'] {
+  --background: #0f172a;
+  --card: #1e293b;
+  --accent: #22c55e;
+  --text: #e5e7eb;
+  --text-muted: #94a3b8;
+  --border: #334155;
+}
+
+[data-theme='ocean-blue'] {
+  --background: #e0f2fe;
+  --card: #ffffff;
+  --accent: #0284c7;
+  --text: #0f172a;
+  --text-muted: #475569;
+  --border: #bae6fd;
+}
+
+[data-theme='sunset-orange'] {
+  --background: #fff7ed;
+  --card: #ffffff;
+  --accent: #ea580c;
+  --text: #1c1917;
+  --text-muted: #78716c;
+  --border: #fed7aa;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--text);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.font-display {
+  font-family: var(--font-display);
+}
+
+.bg-card { background-color: var(--card); }
+.text-accent { color: var(--accent); }
+.bg-accent { background-color: var(--accent); }
+.border-theme { border-color: var(--border); }
+.text-muted { color: var(--text-muted); }
+
+/* Math Background Pattern */
+.math-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: -1;
+  opacity: 0.05;
+  background-image: 
+    linear-gradient(var(--border) 1px, transparent 1px),
+    linear-gradient(90deg, var(--border) 1px, transparent 1px);
+  background-size: 50px 50px;
+}
+
+.math-symbol {
+  position: absolute;
+  font-family: serif;
+  font-size: 2rem;
+  color: var(--text);
+  user-select: none;
+}
